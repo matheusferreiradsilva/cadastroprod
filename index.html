@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <a href="produtos.html" class="botao">Ver Produtos Cadastrados</a>
+  <div class="container">
+    <form class="form">
+  
+
+    <span  class="title">Cadastro de Produtos</span>
+    <label for="nome" >Nome do Produto<input class="input" type="text" id="nome" name="nome">
+    </label>
+    
+    <br>
+    
+    <label for="descricao" >Descrição do Produto<textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
+    </label>
+    
+    <br>
+    
+    <label for="valor" >Valor do Produto <input class="input" type="text" id="valor" name="valor" required>
+    </label>
+    
+    <br>
+
+    <label for="opcao" >Disponível para venda:</label>
+    <input type="radio" id="opcaoSim" name="disponivel" value="sim">
+    <label for="opcaoSim">Sim</label>
+    
+    <input type="radio" id="opcaoNao" name="disponivel" value="nao">
+    <label for="opcaoNao" >Não</label>
+
+    <br>
+    
+    <button type="submit" onclick="pegaDados(), mudaPagina()"> Cadastrar produto </button>
+    </form>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    
+    <script>
+    const cleave = new Cleave('#valor',{
+      numeral: true,
+      prefix: 'R$ ',
+      numeralDecimalMark: ',',
+      delimiter: '.'
+    });
+    </script>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>
